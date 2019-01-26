@@ -2,7 +2,7 @@
 
 Arrow functions bind its `this` keyword to the immediate lexical context, whereas the `this` in normal es5 functions are not.
 
-# ES5 Syntax
+### ES5 Syntax
 
 In the following example, `this` is referring back to the context of getJokes, a function connected to an event handler:
 
@@ -19,7 +19,7 @@ function getJokes(e) {
 ```
 The status is defined by the results of the HTTP request and is accessible in the `onload` logic.
 
-# ES2015 Syntax
+### ES2015 Syntax
 
 If we were to use an arrow function for the `onload` logic:
 
