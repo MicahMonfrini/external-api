@@ -1,10 +1,10 @@
 # NOTES
 
-Arrow functions bind its `this` keyword to the immediate lexical context, whereas the `this` in normal es5 functions are not.
+Arrow functions bind the `this` keyword to their immediate lexical context, whereas es5 functions do not.
 
 ### ES5 Syntax
 
-In the following example, `this` is referring back to the context of getJokes, a function connected to an event handler:
+In the following example, `this` is referring back to the context of `getJokes`, a function connected to an event handler:
 
 ``` javascript
 function getJokes(e) {
@@ -17,9 +17,9 @@ function getJokes(e) {
     if(this.status === 200) {
       const response = JSON.parse(this.responseText);
 ```
-The status is defined by the results of the HTTP request and is accessible in the `onload` logic.
+The status is defined by the results of the HTTP request and is accessible in the `onload` logic via `this`.
 
-### ES2015 Syntax
+### ES6 Syntax
 
 If we were to use an arrow function for the `onload` logic:
 
